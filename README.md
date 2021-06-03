@@ -23,9 +23,9 @@ https://woowabros.github.io/experience/2020/06/19/chat-app.html
 
 2. ChannelInitializer<SocketChannel> 확장한 ChatClientInitializer 클래스
     1. SocketChannel 초기화 : initChannel(SocketChannel ch)
-      - ChannelPipeline pipeline = ch.pipeline();
-      - pipeline.addLast(“framer”, new DelimiterBasedFrameDecoder(8192, …));
-      - pipeline.addLast(“handler”, new ChatClientHandler());
+       - ChannelPipeline pipeline = ch.pipeline();
+       - pipeline.addLast(“framer”, new DelimiterBasedFrameDecoder(8192, …));
+       - pipeline.addLast(“handler”, new ChatClientHandler());
 
 3. ChannelInboundMessageHandlerAdapter 확장한 ChatClientHandler 클래스
     1. messageReceived(ChannelHandlerContext cox, String msg)
